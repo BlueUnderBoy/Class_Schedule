@@ -11,6 +11,8 @@ are to take for the upcoming school year.
 
 Spread the word and let your friends know to sign-up and be better prepared for the school year!
 
+To get the prompt started please execute the command "ruby welcome.rb"
+
 Use this repository as a template for your Ruby CLI (command line interface) project.
 
 - Ruby version: `3.2.1`
