@@ -1,4 +1,5 @@
 require "date"
+#require './student'
 class Student
   attr_accessor :first_name, :last_name, :school, :grade
   attr_writer :date
