@@ -5,7 +5,7 @@ require './test/student'
 class TestStudent < Minitest::Test
   def test_initialize
     student = Student.new("Jalen", "Young")
-    ssert_equal 'Jalen', student.first_name
+    assert_equal 'Jalen', student.first_name
     assert_equal 'Young', student.last_name
   end
 
