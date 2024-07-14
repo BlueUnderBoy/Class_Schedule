@@ -147,11 +147,13 @@ if s == "elementary school"
   g = gets.chomp
   unless g == "kindergarten" || g == 1 || g == 2 || g == 3 || g == 4 || g == 5
     puts "Please enter kindergarten or any number from 1-5..."
+    puts "You may need to put quotes around your input."
     g = gets.chomp
   end
   student.grade = g
   elementary = Elementary.new
   puts "Now to reveal your coursework for the upcoming year!"
+  puts "You may need to put quotes around your input."
   if g.to_s == "kindergarten"
     puts elementary.kindergarten
   elsif g.to_s == "1"
@@ -170,6 +172,7 @@ elsif s == "grammar school"
   g = gets.chomp
   unless g == 6 || g == 7 || g == 8
     puts "Please enter a grade from 6-8..."
+    puts "You may need to put quotes around your input."
     g = gets.chomp
   end
   student.grade = g
@@ -187,6 +190,7 @@ elsif s == "high school"
   g = gets.chomp
   unless g == 9 || g == 10 || g == 11 || g == 12
     puts "Please enter a grade from 9-12..."
+    puts "You may need to put quotes around your input."
     g = gets.chomp
   end
   student.grade = g
@@ -206,6 +210,7 @@ elsif s == "college"
   g = gets.chomp.downcase!
   unless g == "freshman" || g == "sophomore" || g == "junior" || g == "senior"
     puts "Please enter either freshman, sophomore, junior, or senior..."
+    puts "You may need to put quotes around your input."
     g = gets.chomp
   end
   student.grade = g

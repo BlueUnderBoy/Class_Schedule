@@ -14,6 +14,8 @@ Spread the word and let your friends know to sign-up and be better prepared for 
 To get the prompt started please execute the command "ruby welcome.rb"
 To run a mini test please execute the command "ruby test/test_student.rb"
 
+IMPORTANT: Please also note that when entering an answer for the grade level that you put quotations around it! (i.e "9" , "freshman", "kindergarten")
+
 Use this repository as a template for your Ruby CLI (command line interface) project.
 
 - Ruby version: `3.2.1`
