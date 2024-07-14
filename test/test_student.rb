@@ -1,27 +1,9 @@
-class Student
-  attr_accessor :first_name, :last_name, :school, :grade
-  attr_writer :date
-  
-  def initialize(first_name, last_name)
-      @first_name = first_name
-      @last_name = last_name
-  end
+require 'minitest/autorun'
+require './test/student'
 
-  def date
-    return Date.today
-  end
 
-  def school=(value)
-    unless value.is_a?(String)
-      raise TypeError, "School name must be a string"
-    end
-    @school=value
-  end
-
-  def grade=(value)
-    unless value.is_a?(String) || value.is_a?(Integer)
-      raise TypeError, "Grade must be corrected"
-    end
-    @grade=value
+class TestStudent < Minitest::Test
+  def test_user
+    assert_equal "Jalen", Student.first_name("Jalen") , "Adding student method failed"
   end
 end
