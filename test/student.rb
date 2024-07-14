@@ -2,12 +2,9 @@ class Student
   attr_accessor :first_name, :last_name, :school, :grade
   attr_writer :date
   
-  def initialize(first_name)
+  def initialize(first_name, last_name)
       @first_name = first_name
-  end
-
-  def last_name=(value)
-    @last_name = last_name
+      @last_name = last_name
   end
 
   def date
@@ -28,6 +25,3 @@ class Student
     @grade=value
   end
 end
-
-student = Student.new
-student.grade = 3
