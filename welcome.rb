@@ -2,7 +2,8 @@ require "date"
 #require './student'
 class Student
   attr_accessor :first_name, :last_name, :school, :grade
-  attr_writer :date
+  attr_writer :date 
+  attr_reader :today
   
   def initialize(first_name, last_name)
       @first_name = first_name
@@ -11,6 +12,10 @@ class Student
 
   def date
     return Date.today
+  end
+
+  def today 
+    return self.date
   end
 
   def school=(value)
@@ -153,7 +158,7 @@ if s == "elementary school"
   student.grade = g
   elementary = Elementary.new
   puts "Now to reveal your coursework for the upcoming year!"
-  puts "You may need to put quotes around your input."
+  puts "As of #{student.today} your schedule is: "
   if g.to_s == "kindergarten"
     puts elementary.kindergarten
   elsif g.to_s == "1"
@@ -178,6 +183,7 @@ elsif s == "grammar school"
   student.grade = g
   grammar = Grammar.new
   puts "Now to reveal your coursework for the upcoming year!"
+  puts "As of #{student.today} your schedule is: "
   if g.to_s == "6"
     puts grammar.six
   elsif g.to_s == "7"
@@ -196,6 +202,7 @@ elsif s == "high school"
   student.grade = g
   highschool = HighSchool.new
   puts "Now to reveal your coursework for the upcoming year!"
+  puts "As of #{student.today} your schedule is: "
   if g.to_s == "9"
     puts highschool.nine
   elsif g.to_s == "10"
@@ -216,6 +223,7 @@ elsif s == "college"
   student.grade = g
   college = College.new
   puts "Now to reveal your coursework for the upcoming year!"
+  puts "As of #{student.today} your schedule is: "
   if g == "senior"
     puts college.senior
   elsif g == "junior"
